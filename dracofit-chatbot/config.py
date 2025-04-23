@@ -1,8 +1,13 @@
 import os
 
 # --- Hugging Face ---
-# Use environment variable for the token for better security, with a fallback
-HF_TOKEN = os.environ.get("HF_TOKEN", "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")
+# Use environment variable for the token for better security
+# Ensure HF_TOKEN environment variable is set in your deployment environment.
+HF_TOKEN = os.environ.get("HF_TOKEN")
+if HF_TOKEN is None:
+    print("Warning: HF_TOKEN environment variable not set. Model loading might fail.")
+    # Or raise an error:
+    # raise ValueError("HF_TOKEN environment variable not set.")
 
 # --- Model Configuration ---
 DEFAULT_MODEL_NAME = "google/gemma-2-2b-it"
