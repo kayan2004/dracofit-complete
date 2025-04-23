@@ -132,6 +132,4 @@ You need to run all three parts concurrently.
 *   **`dracofit-chatbot/config.py`**: Hugging Face token, model name, system prompt, generation parameters, GPU settings.
 *   **`dracofit-frontend/.env`**: URL of the `dracofit-backend` API (`VITE_API_URL`).
 
-```# Dracofit - Your Gamified Fitness Companion with AI Chat
-
 
