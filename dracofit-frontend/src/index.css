@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import "tailwindcss";
+@theme {
+  --color-midnight-green: #00302f;
+  --color-midnight-green-darker: #001f1e;
+  --color-goldenrod: #e3a225;
+  --color-dark-goldenrod: #966811;
+  --color-sepia: #633d00;
+  --color-medium-aquamarine: #5fe4c1;
+  --color-dark-aquamarine: #289f83;
+  --color-darker-aquamarine: #1b6f5a;
+  --color-dark-slate-gray: #185656;
+  --color-gray: #99a1af;
+  --color-dark-gray: #6a7282;
+
+  /* Font size variables */
+  --text-heading-1: 2.5rem; /* 40px */
+  --text-heading-2: 2rem; /* 32px */
+  --text-heading-3: 1.5rem; /* 24px */
+  --text-heading-4: 1.25rem; /* 20px */
+  --text-body: 1rem; /* 16px */
+  --text-body-sm: 0.875rem; /* 14px */
+  --text-caption: 0.75rem; /* 12px */
+  --text-tiny: 0.625rem; /* 10px */
+
+  --font-display: "Pixelify Sans", sans-serif;
+}
+
+* {
+  font-family: var(--font-display);
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.input-case {
+  text-transform: none !important;
+}
+
+/* Add this rule to target all elements inside .chat-input */
+.chat-input * {
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+
+/* Make strong elements actually bold */
+.chat-input strong {
+  font-weight: bold !important;
+}
+
+/* Fix list styling */
+.chat-input ul,
+.chat-input ol {
+  list-style: revert !important;
+  margin-left: 1.5em !important;
+}
+/* Don't transform form elements */
+
+/* Change autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #0d3b3b inset !important; /* Match your desired background color */
+  -webkit-text-fill-color: var(
+    --color-goldenrod
+  ) !important; /* Match your desired text color */
+  transition: background-color 5000s ease-in-out 0s; /* Make the background persistent */
+  caret-color: var(--color-goldenrod); /* Cursor color */
+}
+
+button {
+  cursor: pointer;
+}
